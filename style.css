@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2e2e44;
+}
+.digital-clock{
+    position: relative;
+    color: white;
+    background-color: #2d2f41;
+    width: 50%;
+    height: 50%;
+    padding: 20px 45px;
+    box-shadow: 0 5px 25px rgba(14, 21, 37,0.8);
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.outer{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-linear-gradient(90deg, #634dff, #5fd4ff);
+    -webkit-text-fill-color: transparent;
+}
+.outer2{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-linear-gradient(90deg,  #ff5e9a, #ffb960);
+    -webkit-text-fill-color: transparent;
+}
+.inner{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2d2f41 ;
+}
+.time{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.hours .dots, .minutes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  padding: 0 10px;
+  line-height: 125px;
+}
+.hours, .minutes{
+font-size: 60px;
+}
+.dots{
+    font-size:60px;
+    color:#1cec8b;   
+}
+.hours{
+    background: -webkit-linear-gradient(90deg, #634dff, #5fd4ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.minutes{
+    background: -webkit-linear-gradient(90deg,  #ff5e9a, #ffb960);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.right-side{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+.period, .seconds{
+    font-size: 30px;
+    font-weight: 500;
+}
+.period{
+    transform: translateY(-20px);
+    background: -webkit-linear-gradient(90deg,  #ff5e9a, #ffb960);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.seconds{
+    transform: translateY(16px);
+    background: -webkit-linear-gradient(90deg, #01ceb2, #05b1f0);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.calendar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-top: 35px;
+   
+    background: -webkit-linear-gradient(90deg, #1cec8b, #05eecf);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  
+}
+.day-name,.date-number,.year{
+ margin-left: 8px;
+}
+i{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-size: 20px;
+}
+.dot-menu{
+    z-index: 999;
+    list-style: none;
+    background-color: #353e54;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0,0.8);
+    margin-bottom: 10px;
+}
+.menu-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock-format-text{
+    color: #efefef;
+    font-size: 15px;
+}
+.format-switch-btn{
+    width: 35px;
+    height: 15px;
+    background: #485470;
+    border-radius: 75px;
+    box-shadow: inset 2px 2px 4px rgba(255,255,255,0.1),
+                inset -2px -2px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+}
+.format-switch-btn:before{
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #089ea3;
+    border-radius: 50%;
+    transform: translateX(-10px);
+    transition: 0.3s ease;
+    transition-property: background, transform;
+}
+.format-switch-btn.active:before{
+    background-color: #1cec8b;
+    transform: translateX(10px);
+}
